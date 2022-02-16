@@ -39,44 +39,84 @@
     </ul>
 
     <p><strong>•	¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE? </strong></p> 
-    <p> </p>
+    <ul>
+      <li><b>GET:</b> Recuperar datos del servidor.</li>
+      <li><b>HEAD:</b> Envía el header sin el cuerpo.</li>
+      <li><b>POST:</b> Enviar entidad a un recurso específico.</li>
+      <li><b>PUT:</b> Reemplaza y actualiza todas las representaciones del recurso.</li>
+      <li><b>PATCH:</b> Reemplaza y actualiza datos parcialmente.</li>
+      <li><b>DELETE:</b> Borra recursos.</li>
+      <li><b>CONNECT:</b> Establece un túnel al servidor especificado.</li>
+      <li><b>TRACE:</b> Realiza prueba de búcle de retorno.</li>
+  </ul>
 
     <p><strong>•	¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué? </strong></p> 
-    <p>PUT porque ingresa información cifrada. </p>
+    <p>POST porque es el adecuado para ingresar información cifrada y enviarla al servidor. </p>
 
     <p><strong>•	¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL? </strong></p> 
     <p> </p>
 
     <p><strong>•	Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error? </strong></p> 
-    <p> </p>
+    <p>No existió error, todo código en rango de 200 significa que la petición fue procesada exitosamente. </p>
 
     <p><strong>•	¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué? </strong></p> 
-    <p> </p>
+    <p>No, dado a que el error 404 es derivado de problemas específicamente del usuario dado a que el recurso especificado no existe. </p>
 
     <p><strong>•	¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué? </strong></p> 
-    <p> </p>
+    <p>Si, dado a que los errores 500 son dependientes del servidor en cuestión. </p>
 
     <p><strong>•	¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados. </strong></p> 
-    <p> </p>
+    <p>El deprecated significa que un elemento sigue en probable funcionamiento, pero ya no se le da mantenimiento y no es recomendado para su uso en versiones posteriores puesto a que se actualizó o dejó de ser útil.</p>
+    <p>Algunos tags despreciados incluyen font (Fuente y tamaño de letra), menu (Especifica una lista de tipo menú), u (subrayar), dir (directorios), etc.</p>
 
     <p><strong>•	¿Cuáles son las diferencias principales entre HTML 4 y HTML5? </strong></p> 
-    <p> </p>
+    <p>HTML4 manejaba una variedad extensa de etiquetas para todo el contenido, mezclando la estructura de la página con la presentación de esta, HTML5 puede ahora anexar elementos como SVG y MathML, además de que maneja secciones nuevas como section, article, aside, header, footer. Mientras tanto, HTML4 maneja head, body y las etiquetas originales, asimismo el ahora llamado header antes se escribía con la palabra div y class dentro de los símbolos de identificación, simplificando el proceso ahora en HTML5. </p>
 
     <p><strong>•	¿Qué componentes de estructura y estilo tiene una tabla? </strong></p> 
-    <p> </p>
+    <ul>
+      <li><b>caption:</b> Descripcion de la tabla y lo que contiene</li>
+      <li><b>colgroup:</b> Agrupa columnas por temática</li>
+      <li><b>col:</b> Aplica atributos comunes</li>
+      <li><b>thead:</b> Los encabezadps de la tabla</li>
+      <li><b>tbody:</b> El cuerpo de la tabla</li>
+      <li><b>tfoot:</b> Pie de tabla.</li>
+      <li><b>tr:</b> Fila de tabla</li>
+      <li><b>th:</b> Header en una celda</li>
+      <li><b>td:</b> Contiene la información de una celda de manera regular.</li>
+  </ul>
 
     <p><strong>•	¿Cuáles son los principales controles de una forma HTML5? </strong></p> 
-    <p> </p>
+    <p>
+      <b>INPUT</b><br></br>
+      <ul>
+      <li>Los campos de texto "input" son los controles de formulario más básicos, permiten al usuario introducir cualquier tipo de datos.</li>
+      <li>Las casillas de verificación se crean estableciendo el atributo type del elemento "input" en el valor checkbox.</li>
+      <li>Un botón de opción se crea estableciendo el atributo type del elemento "input" en el valor radio.</li>
+     </ul>
+     <br></br>
+  
+      
+      <b>BOTONES</b><br></br>
+      <ul>
+      <li><b>submit --></b> Envía los datos del formulario al servidor.</li> 
+      <li><b>reset --> </b>Restablece todos los controles de formulario a sus valores por defecto.</li>
+      <li><b>button --></b> Botones que no tienen efecto automático, pero que se pueden personalizar con código JavaScript.</li>
+      </ul>
+  
+    </p>
 
     <p><strong>•	¿Qué tanto soporte HTML5 tiene el navegador que utilizas? Puedes utilizar la siguiente página para descubrirlo: http://html5test.com/ (Al responder la pregunta recuerda poner el navegador que utilizas) </strong></p> 
-    <p> </p>
+    <p>476/555. El Navegador es Google Chrome. </p>
 
-    <h3>•	Sobre el ciclo de vida y desarrollo de los sistemas de información: </h3> 
-    <p><strong>o	¿Cuál es el ciclo de vida de los sistemas de información? </strong></p> 
-    <p> </p>
-    
-    <p><strong>o	¿Cuál es el ciclo de vida de los sistemas de información? </strong></p> 
-    <p> </p>
+    <h3>¿Cuál es el ciclo de vida y desarrollo de los sistemas de información? </h3> 
+    <ol>
+      <li>Fase de planificacion.</li>
+      <li>Fase de analisis</li>
+      <li>Fase de diseno</li>
+      <li>Fase de desarrollo</li>
+      <li>Fase de integracion y periodo de pruebas</li>
+      <li>Fase de implementacion</li>
+    </ol>
 
   </section>
 </body>
