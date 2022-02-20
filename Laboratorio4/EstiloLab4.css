@@ -1,0 +1,17 @@
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: rgba(0, 0, 255, 0.575);
+    color: white;
+  }
+  header {
+    text-align: center;
+    padding: 3px;
+    background-color: blue;
+    color: white;
+  }
+  body {
+    padding: 3px;
+    background-color: rgba(0, 132, 255, 0.692);
+    color: white;
+  }
