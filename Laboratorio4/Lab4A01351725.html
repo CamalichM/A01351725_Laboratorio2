@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h1>Laboratorio 4: Fundamentos de JavaScript</h1>
+</head>
+
+<body>
+    <p><strong>Problema 1: Tabla de Cuadrados</strong></p>
+    <div id="resultados"></div>
+    <p><strong>Problema 2: Suma de Números</strong></p>
+    <div id="sumadenum"></div>
+    <p><strong>Problema 3: Contador</strong></p>
+    <div id="arre"></div>
+    <div id="conta"></div>
+    <p><strong>Problema 4: Promedio</strong></p>
+    <div id="promedio"></div>
+    <p><strong>Problema 5: Inverso</strong></p>
+    <div id="inverso"></div>
+    <p><strong>Problema 6: Operación Manual</strong></p>
+    <div id="ope"></div>
+    <h2>Sección de Preguntas</h2>
+    <p><strong>1. ¿Qué diferencias y semejanzas hay entre Java y JavaScript?</strong></p>
+    <p>Java es un lenguaje orientado a objetos mayormente de servidor que ejecuta código en navegador a través de máquinas virtuales y Javascript es un lenguaje basado en prototipos, nativo de navergadores, de código de cliente, con mayor versatilidad y menos pesado.</p>
+    <p><strong>2. ¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)</strong></p>
+    <ul>
+        <li>Date.now()=Devuelve el valor numérico de la fecha actual.</li>
+        <li>Date.parse()=Transforma una cadena representante de una fecha y la devuelve en milisegundos.</li>
+        <li>Date.getMilliseconds()=Devuelve los milisegundos entre 0 y 9999.</li>
+        <li>Date.getDate()=Devuelve el día del mes entre 1 y 31.</li>
+        <li>Date.getFullYear()=Devuelve los cuatro dígitos del año.</li>
+    </ul>
+    <p><strong>3. ¿Qué métodos tienen los arreglos? (Menciona al menos 5*)</strong></p>
+    <ul>
+    <li>filter()=Filtra el arreglo y regresa otro arreglo filtrado con la condición buscada.</li>
+    <li>find()=Recorre el arreglo y regresa la primera coincidencia encontrada con la búsqueda.</li>
+    <li>sort()= Ordena los elementos del arreglo y retorna el arreglo ordenado.</li>
+    <li>concat()=Une dos o más arreglos.</li>
+    <li>push()=Añade elementos al final del arreglo.</li>
+    </ul>
+    <p><strong>4. ¿Cómo se declara una variable con alcance local dentro de una función?</strong></p>
+    <p>function miFuncion (){ </p>
+    <p>var variableLocal </p>
+    <p>} </p>
+    <p>O también existe el alcance a nivel de bloque con la instrucción "let"</p>
+    <p>let var1 [= valor1] [, var2 [= valor2]] [, ..., varN [= valorN]];</p>
+    <p><strong>5. ¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</strong></p>
+    <p>Las variables globales es de acceso total en el código. Esto significa el código puede tomar esta variable a su conveniencia en cualquier parte de este, lo que implica su uso dentro y fuera de las funciones. Un mal o indebido uso de estas variables puede crear dependencias y movimientos desconocidos que pueden arruinar el programa.</p>
+    
+    <footer>
+        <p></p>
+        <p>Marco Antonio Camalich Pérez</p>
+        <p>A01351725</p>
+        <p>a01351725@tec.mx</p>
+        <p>15 de febrero de 2022</p>
+        <p>Construcción de software y toma de decisiones</p>
+        <h2>Referencias Bibliográficas:</h2>
+        <ul>
+            <li>Copes, F. (2020, March). The JavaScript Beginner’s Handbook (2020 Edition). Retrieved February 20, 2022, from freeCodeCamp.org website: https://www.freecodecamp.org/news/the-complete-javascript-handbook-f26b2c71719c/</li>
+            <li>Ionel Hindorean. (2019, September 2). How JavaScript Works - Better Programming. Retrieved February 20, 2022, from Medium website: https://betterprogramming.pub/how-javascript-works-1706b9b66c4d ‌</li>
+            <li>Morelli, B. (2017, June 15). JavaScript: Why does 3 + true = 4? (and 7 other tricky equations). Retrieved February 20, 2022, from Medium website: https://codeburst.io/javascript-why-does-3-true-4-and-7-other-tricky-equations-9dd13cb2a92a</li>
+        </ul>
+    </footer>
+        <script src="Lab4.js"></script>   
+</body>
+
+</html>
