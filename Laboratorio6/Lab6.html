@@ -1,0 +1,179 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+  
+<head> 
+    <meta charset="UTF-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" /> 
+    <title>Lab 6: Programación orientada a eventos </title> 
+    <link rel="stylesheet" href= 
+"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity= 
+"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous" /> 
+
+        <style type="text/css">
+            .ocultar {
+                display: none;
+            }
+
+            .mostrar {
+                display: block;
+            }
+            figcaption {
+  display:none; 
+  transition: all .5s;
+}
+
+figure:hover > figcaption {
+  display:block;
+  transition: all .5s;
+}
+#Respuesta1:hover{
+    font-family: 'Times New Roman', Times, serif;
+    color: blue;}    
+
+#Respuesta2:hover{
+    font-family: 'Times New Roman', Times, serif;
+    color: blue;    
+}
+#Respuesta3:hover{
+    font-family: 'Times New Roman', Times, serif;
+    color: blue;    
+}
+header {
+    text-align: center;
+    padding: 3px;
+    background-color: blue;
+    color: white;
+  }
+
+        </style>
+            <header>
+                <img src="https://queretaro.itesm.mx/wp-content/uploads/2015/06/LogoTecPeque%C3%B1o.png"
+                width="300"
+                height="100"
+                class = "logo">
+                <h1>Lab 6: Programación orientada a eventos</h1>  
+            </header>
+
+</head> 
+  
+<body>
+
+    <div class="container" id="Contra"> 
+        <div id="msg"></div>
+
+        <!-- Mensajes de Verificación -->
+        <div id="error" class="alert alert-danger ocultar" role="alert">
+            Las Contraseñas no coinciden. Intenta de nuevo.
+        </div>
+        <div id="ok" class="alert alert-success ocultar" role="alert">
+            Las Contraseñas coinciden! Bienvenido a la plataforma!
+        </div>
+        <!-- Fin Mensajes de Verificación -->
+
+        <form id="miformulario" onsubmit="verificarPasswords(); return false">
+            <div class="form-group">
+              <label for="usuario">Usuario</label>
+              <input type="text" class="form-control" id="usuario" required>              
+            </div>
+            <div class="form-group">
+              <label for="pass1">Contraseña</label>
+              <input type="password" class="form-control" id="pass1" required>
+            </div>
+            <div class="form-group">
+                <label for="pass2">Vuelve a escribir la Contraseña</label>
+                <input type="password" class="form-control" id="pass2" required>                
+            </div>
+            
+            <button type="submit" id="login" class="btn btn-primary">Login</button>
+        </form>         
+
+    </div>
+    <div id="Contenido" style="text-align: center;">
+        <h2>¡Bienvenido al conocimiento en Programación orientada a eventos!</h2>
+        <p><b>¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor?</b></p>
+        <p id="Respuesta1">
+        
+        </p>
+        <p><b>¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</b></p>
+        <p id="Respuesta2">
+        
+        </p>
+        <p><b>Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica?</b></p>
+        <p id="Respuesta3">
+        
+        </p>
+        <figure>
+            <img src="http://www.buscoayuda.org/assets/img/logo.png" alt="Ayuda" width="60" height="60" />
+            <figcaption>!Gracias por ingresar a la plataforma! Fue diseñada por medio de HTML, CSS y Javascript y puedes recargarla para hacer los experimentos que quieras. ¡Disfruta del contenido informativo e inicia sesión cuando gustes!</figcaption>
+          </figure>
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity= 
+"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"> 
+    </script> 
+    <script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity= 
+"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"> 
+    </script> 
+    <script src= 
+"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity= 
+"sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"> 
+    </script> 
+
+
+    <script type="text/javascript">
+
+    var elem = document.getElementById('Contra');
+    var elem2 = document.getElementById('Contenido');
+    var elem3 = document.getElementById('Ayuda');
+    $(elem2).hide();
+        function verificarPasswords() {
+
+            // Ontenemos los valores de los campos de contraseñas 
+            pass1 = document.getElementById('pass1');
+            pass2 = document.getElementById('pass2');
+
+            // Verificamos si las constraseñas no coinciden 
+            if (pass1.value != pass2.value) {
+
+                // Si las constraseñas no coinciden mostramos un mensaje 
+                document.getElementById("error").classList.add("mostrar");
+
+                return false;
+            }
+            
+            else {
+
+                // Si las contraseñas coinciden ocultamos el mensaje de error
+                document.getElementById("error").classList.remove("mostrar");
+
+                // Mostramos un mensaje mencionando que las Contraseñas coinciden 
+                document.getElementById("ok").classList.remove("ocultar");
+
+                // Desabilitamos el botón de login 
+                document.getElementById("login").disabled = true;
+
+                setTimeout(function() {
+                    $(elem).hide();
+                    $(elem2).show();
+                }, 3000);
+                return true;
+            }
+
+        } 
+        
+    </script>
+  
+</body>
+  
+</html> 
