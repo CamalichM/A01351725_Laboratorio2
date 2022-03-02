@@ -30,7 +30,10 @@ const server = http.createServer( (request, response) => {
         }
         response.write('</ul>');
         response.write('<br><br>');
-        response.write('<a href="nuevo">Agregar un nuevo capybara</a>');
+        response.write('<ul>');
+        response.write('<li><a href="nuevo">Agregar un nuevo capybara</a></li>');
+        response.write('<li><a href="borrar">Borrar capybaras agregados</a></li>');
+        response.write('</ul>');
         response.write('</body>');
         response.end();
     } else if (request.url === '/nuevo' && request.method === 'GET') {
@@ -63,11 +66,7 @@ const server = http.createServer( (request, response) => {
             console.log(nuevo_dato);
             capybaras.push(nuevo_dato);
             response.setHeader('Content-Type', 'text/html');
-            response.write('<!DOCTYPE html>');
-            response.write('<html lang="es-mx"><head>');
-            response.write('<meta charset="utf-8">');
-            response.write('<title>Capybaras</title>');
-            response.write('</head><body>');
+            response.write('<!DOCTYPE html><html lang="es-mx"><head><meta charset="utf-8"><style> header{text-align: center;padding: 3px;background-color: blue;color: white;} </style> <header> <img src="https://queretaro.itesm.mx/wp-content/uploads/2015/06/LogoTecPeque%C3%B1o.png" width="300" height="100" class = "logo"> <h1>Lab 10: Rutas y formas</h1> </header> </head><body>');
             response.write('<h1 id="principal">Este sitio es de capybaras</h1>');
             response.write('<p>Tenemos los siguientes capybaras:</p>');
             response.write('<ul>');
@@ -83,12 +82,10 @@ const server = http.createServer( (request, response) => {
     } else {
         response.statusCode = 404;
         response.setHeader('Content-Type', 'text/html');
-        response.write('<!DOCTYPE html>');
-        response.write('<html><head>');
-        response.write('<meta charset="utf-8">');
-        response.write('<title>Capybaras | Not found</title>');
-        response.write('</head><body>');
-        response.write('<h1 id="principal">Este capybara no existe, amigo.</h1>');
+        response.write('<!DOCTYPE html><html lang="es-mx"><head><meta charset="utf-8"><style> header{text-align: center;padding: 3px;background-color: blue;color: white;} </style> <header> <img src="https://queretaro.itesm.mx/wp-content/uploads/2015/06/LogoTecPeque%C3%B1o.png" width="300" height="100" class = "logo"> <h1>Lab 10: Rutas y formas</h1> </header> </head><body>');
+        response.write('<h1 align="center">Capybaras | Not found</h1>');
+        response.write('<body>');
+        response.write('<h2 id="principal">Este capybara no existe, amigo. :( </h2>');
         response.write('</body>');
         response.end();
     }
