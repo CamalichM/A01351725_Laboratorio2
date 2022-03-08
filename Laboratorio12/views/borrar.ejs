@@ -1,0 +1,12 @@
+<%- include('includes/head.ejs') %>
+<h1 id="principal">Este sitio es de capybaras, pero con un clic los limpiarás.</h1>
+<h2>¿Seguro que quieres borrar la lista?</h2>
+<form action="borrar" method="POST">
+<br><br>
+<input type="submit" value="Borrar preterminadamente">
+</form>
+<form action="person" method="GET">
+<input type="submit" value="Borrar con nombre personalizado">
+</form>
+<a href="/">No borrar y regresar a la lista de capybaras.</a>
+<%- include('includes/foot.ejs') %>
