@@ -1,7 +1,6 @@
 const path = require('path');
 var Capybara = require('../models/capybara');
 const fs = require('fs');
-
 function add(archivo,dato){
     fs.appendFile(archivo, dato + "\n" , (err) => {
         if (err) throw err;
@@ -34,6 +33,7 @@ exports.post_borrar = (request, response, next) => {
     console.log('POST /capybaras/borrar');
     var borrado ="Capybara base";
     const capybara = new Capybara(borrado);
+    response.setHeader('Set-Cookie', 'borro_capybara='+capybara.ultimo()+'; HttpOnly');
     capybara.borrado();
     fs.writeFileSync('archives/capybaras.txt',"Capybara base\n");
     console.log("Archivo borrado satisfactoriamente.");
@@ -49,6 +49,7 @@ exports.post_person=(request, response, next) => {
     console.log('POST /capybaras/person');
     console.log(request.body);
     const capybara = new Capybara(request.body.nombre);
+    response.setHeader('Set-Cookie', 'borro_capybara='+capybara.ultimo()+'; HttpOnly');
     capybara.borrado();
     fs.writeFileSync('archives/capybaras.txt',request.body.nombre+"\n");
     console.log("Archivo borrado satisfactoriamente.");
@@ -63,6 +64,7 @@ exports.get_original=(request, response, next) => {
 
 exports.post_original=(request, response, next) => {
     const capybara = new Capybara("");
+    response.setHeader('Set-Cookie', 'borro_capybara='+capybara.ultimo()+'; HttpOnly');
     capybara.original();
     console.log('POST /capybaras/original');
     fs.writeFileSync('archives/capybaras.txt',"Pedro\nPancho\nLuis\nEnrique\n");
@@ -73,8 +75,12 @@ exports.post_original=(request, response, next) => {
 exports.use_menu=(request, response, next) => {
     console.log('Ruta /capybaras');
     console.log(request.cookies);
+    const info = request.session.info ? request.session.info : '';
+    request.session.info = '';
     response.render('lista', {
         capybaras: Capybara.fetchAll(),
         ultimo_capybara: request.cookies.ultimo_capybara ? request.cookies.ultimo_capybara : '',
+        borro_capybara: request.cookies.borro_capybara ? request.cookies.borro_capybara : 'Capybara base',
+        info: info
     }); 
 }

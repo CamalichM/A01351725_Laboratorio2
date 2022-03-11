@@ -43,5 +43,8 @@ module.exports = class Capybara {
         capybaras=[];
         capybaras.push(this);
     }
+    ultimo(){
+        return capybaras.pop().nombre;
+    }
 
 }
