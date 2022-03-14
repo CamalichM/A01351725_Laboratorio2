@@ -24,11 +24,13 @@
         <h1>Ahorita no hay capybaras, regresa pronto.</h1>
     <% } %>  
     </div>
-    <% if (ultimo_capybara != '') { %>
+    <% if ((ultimo_capybara != '')&&(ultimo_cambio != '')) { %>
         <p>El último capybara agregado fue: <%= ultimo_capybara %></p>
+        <p>El último capybara agregado por medio de modificación fue: <%= ultimo_cambio %></p>
     <% } %>  
     <br>
     <a href="/capybaras/nuevo"><i class="material-icons">add</i> Agregar un nuevo capybara</a>
+    <a href="/capybaras/actualizar"><i class="material-icons">add</i> Actualizar un capybara existente</a>
     <br><br>
     
 <%- include('includes/foot.ejs') %>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-03-2022 a las 23:42:14
+-- Tiempo de generación: 14-03-2022 a las 06:50:43
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.10
 
@@ -61,10 +61,13 @@ CREATE TABLE `capybaras` (
 --
 
 INSERT INTO `capybaras` (`id`, `nombre`, `descripcion`, `imagen`, `created_at`) VALUES
-(1, 'Antonio', 'Es guapo', 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Capybara_%28Hydrochoerus_hydrochaeris%29.JPG/1200px-Capybara_%28Hydrochoerus_hydrochaeris%29.JPG', '2022-03-13 22:38:38'),
-(2, 'Alberto', 'Es buena onda', 'https://i.pinimg.com/550x/4a/38/95/4a38950759f9054e7e7b11c10036db19.jpg', '2022-03-13 22:39:59'),
+(1, 'Anton', 'Es serio', 'https://s2.coinmarketcap.com/static/img/coins/200x200/16636.png', '2022-03-14 05:49:56'),
+(2, 'Adalberto', 'Es simpático', 'https://pbs.twimg.com/media/Enmf1ZwXcAEsX53.jpg', '2022-03-14 04:58:49'),
 (3, 'Adrián', 'Es gracioso', 'https://i1.wp.com/peccaryleather.com/wp-content/uploads/2020/01/especie-carpincho.jpg?fit=800%2C600&ssl=1', '2022-03-13 22:41:27'),
-(4, 'Marco', 'Es chido', 'https://www.zoobrno.cz/wh/960-720/img/catalog/img/hydrochaeris-hydrochaeris.jpg', '2022-03-13 22:39:12');
+(4, 'Marco', 'Es chido', 'https://www.zoobrno.cz/wh/960-720/img/catalog/img/hydrochaeris-hydrochaeris.jpg', '2022-03-13 22:39:12'),
+(5, 'Peter', 'Es genial', 'https://dictionary.cambridge.org/es/images/thumb/capyba_noun_004_0649.jpg?version=5.0.225', '2022-03-14 04:16:50'),
+(6, 'Aldo', 'Es atractivo', 'https://www.fao.org/3/V4590S/V4590S03.jpg', '2022-03-14 04:20:08'),
+(7, 'Anastacio', 'Le gusta la piña', 'https://i.etsystatic.com/6874055/r/il/9a0232/3296820036/il_fullxfull.3296820036_pjnm.jpg', '2022-03-14 04:18:43');
 
 -- --------------------------------------------------------
 
@@ -115,7 +118,7 @@ ALTER TABLE `caballos`
 -- AUTO_INCREMENT de la tabla `capybaras`
 --
 ALTER TABLE `capybaras`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

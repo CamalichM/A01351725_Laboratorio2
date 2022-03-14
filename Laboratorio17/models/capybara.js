@@ -15,6 +15,14 @@ module.exports = class Capybara {
             [this.nombre, this.descripcion, this.imagen]);
     }
 
+    delete(id) {
+        return db.execute('DELETE FROM capybaras WHERE id=?', [id]);
+    }
+    change(id){
+        return db.execute('INSERT INTO capybaras (id, nombre, descripcion, imagen) VALUES (?, ?, ?, ?)', 
+        [id, this.nombre, this.descripcion, this.imagen]);
+    }
+
     //Este método servirá para devolver los objetos del almacenamiento persistente.
     static fetchAll() {
         return db.execute('SELECT * FROM capybaras');
