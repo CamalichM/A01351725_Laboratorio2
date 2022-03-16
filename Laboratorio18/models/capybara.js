@@ -24,4 +24,8 @@ module.exports = class Capybara {
         return db.execute('SELECT * FROM capybaras WHERE id=?', [capybara_id]);
     }
 
+    static fetchTwo(capybara_nombre) {
+        return db.execute('SELECT * FROM capybaras WHERE nombre=?', [capybara_nombre]);
+    }
+
 }
