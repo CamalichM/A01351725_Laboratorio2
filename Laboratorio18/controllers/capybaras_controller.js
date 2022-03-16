@@ -4,7 +4,6 @@ const Capybara = require('../models/capybara');
 exports.cerveza = (request, response, next) => {
     response.sendFile(path.join(__dirname, '..', 'views', 'cerveza_view.html'));
 };
-
 exports.get_nuevo = (request, response, next) => {
     console.log('GET /capybaras/nuevo');
     response.render('nuevo', {
@@ -28,6 +27,29 @@ exports.post_nuevo = (request, response, next) => {
         .catch(err => console.log(err));
 };
 
+exports.get_cambio = (request, response, next) => {
+    console.log('GET /capybaras/cambio');
+    response.render('cambio', {
+        username: request.session.username ? request.session.username : '',
+        info: ''
+    }); 
+    }
+
+exports.post_cambio = (request, response, next) => {
+    console.log('POST /capybaras/cambio');
+    console.log(request.body);
+    const capybara = new Capybara(request.body.nombre, request.body.descripcion, request.body.imagen);
+    capybara.delete(request.body.id);
+    capybara.change(request.body.id)
+    .then(() => {
+        request.session.info = capybara.nombre + ' fue registrado con éxito';
+        response.setHeader('Set-Cookie', 
+        'ultimo_cambio='+capybara.nombre+'; HttpOnly');
+        response.redirect('/capybaras');
+    })
+    .catch(err => console.log(err));
+};
+
 exports.listar = (request, response, next) => {
     console.log('Ruta /capybaras');
     //console.log(request.get('Cookie').split('=')[1]);
@@ -41,6 +63,7 @@ exports.listar = (request, response, next) => {
                 capybaras: rows,
                 username: request.session.username ? request.session.username : '',
                 ultimo_capybara: request.cookies.ultimo_capybara ? request.cookies.ultimo_capybara : '',
+                ultimo_cambio: request.cookies.ultimo_capybara ? request.cookies.ultimo_cambio : '',
                 info: info //El primer info es la variable del template, el segundo la constante creada arriba
             }); 
         })
@@ -62,6 +85,7 @@ exports.filtrar = (request, response, next) => {
                 capybaras: rows,
                 username: request.session.username ? request.session.username : '',
                 ultimo_capybara: request.cookies.ultimo_capybara ? request.cookies.ultimo_capybara : '',
+                ultimo_cambio: request.cookies.ultimo_capybara ? request.cookies.ultimo_cambio : '',
                 info: info //El primer info es la variable del template, el segundo la constante creada arriba
             }); 
         })
