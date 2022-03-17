@@ -52,7 +52,13 @@ La carpeta "Node Modules" no ha sido subida a GitHub y aunque probablemente no s
 ## ¿Qué ventajas tiene escribir el código SQL únicamente en la capa del modelo? (Lab 17)
 Porque recordemos que la existencia del modelo en el MVC es específica para el acceso, la inserción y la modificación de los datos. Ya que la base de datos es meramente de control de información, el llamarlo en la capa de modelo es la acción propia para poder mantener orden y el funcionamiento según las convenciones, puesto que el controlador funciona solamente para responder a las llamadas del usuario siendo mediador entre rutas y modelos, y las rutas solamente se redirige a los controladores, dando a entender que ninguna de las dos maneja manipulación de datos como para adentrarse en SQL.
 #### Qué es MVC. (2014, January 2). Retrieved March 17, 2022, from Desarrolloweb.com website: https://desarrolloweb.com/articulos/que-es-mvc.html
-## ¿Qué es SQL injection y cómo se puede prevenir?
+## ¿Qué es SQL injection y cómo se puede prevenir? (Lab 17)
 Ciberataque que consta en insertar código propio en una página con SQL para poder acceder a datos protegidos de las bases de datos en cuestión y poder secuestrar toda la información desprotegida, así como manipular los registros, consultas y eliminar datos al antojo del hacker.
 #### ¿Qué es SQL Injection? (2017, October 12). Retrieved March 17, 2022, from OpenWebinars.net website: https://openwebinars.net/blog/que-es-sql-injection/
-
+## ¿Qué otras formas de autentificación existen? (Lab 18)
+-Identificador en línea que, por medio de la red de internet, detecta tu red analizando la condición de cliente o trabajador del usuario que trata de accesar.
+-One Time Password generado por mensaje de texto.
+-Timed Password que cambia cada determinada cantidad de segundos.
+-Url por SMS.
+-Mobile Connect que valida al usuario por la Tarjeta SIM.
+#### admin. (2019, July 5). ¿Cuál es el mejor método de autenticación? Retrieved March 17, 2022, from El blog de Orange website: https://blog.orange.es/empresas/cual-es-el-mejor-metodo-de-autenticacion/
