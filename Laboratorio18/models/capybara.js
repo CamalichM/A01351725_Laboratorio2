@@ -9,6 +9,13 @@ module.exports = class Capybara {
         this.imagen = nueva_imagen;
     }
 
+    delete(id) {
+        return db.execute('DELETE FROM capybaras WHERE id=?', [id]);
+    }
+    change(id){
+        return db.execute('INSERT INTO capybaras (id, nombre, descripcion, imagen) VALUES (?, ?, ?, ?)', 
+        [id, this.nombre, this.descripcion, this.imagen]);
+    }
     //Este método servirá para guardar de manera persistente el nuevo objeto. 
     save() {
         return db.execute('INSERT INTO capybaras (nombre, descripcion, imagen) VALUES (?, ?, ?)', 
