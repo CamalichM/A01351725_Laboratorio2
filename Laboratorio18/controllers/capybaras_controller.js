@@ -21,8 +21,6 @@ exports.post_cambio = (request, response, next) => {
     capybara.change(request.body.id)
     .then(() => {
         request.session.info = capybara.nombre + ' fue registrado con éxito';
-        response.setHeader('Set-Cookie', 
-        'ultimo_cambio='+capybara.nombre+'; HttpOnly');
         response.redirect('/capybaras');
     })
     .catch(err => console.log(err));

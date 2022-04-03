@@ -2,6 +2,7 @@
     <h1 id="principal">Este sitio es de capybaras</h1>
     <h2><%= username %>, aquí cambias a los capybaras:</h2>
     <form action="/capybaras/actualizar" method="POST">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
         <label for="id">Número del capybara que deseas cambiar: </label>
         <input type="text" id="id" name="id" placeholder="1">
         <label for="nombre">Nombre: </label>
