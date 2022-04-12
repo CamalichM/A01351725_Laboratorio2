@@ -4,13 +4,13 @@
     <form action="/capybaras/actualizar" method="POST">
         <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
         <label for="id">Número del animal que deseas cambiar: </label>
-        <input type="text" id="id" name="id" placeholder="1">
+        <input type="text" id="id" name="id" placeholder="1" required>
         <label for="nombre">Nombre: </label>
-        <input type="text" id="nombre" name="nombre" placeholder="Pedro">
+        <input type="text" id="nombre" name="nombre" placeholder="Pedro" required>
         <label for="descripcion">Descipción: </label>
-        <input type="text" id="descripcion" name="descripcion" placeholder="Le gusta la piña">
+        <input type="text" id="descripcion" name="descripcion" placeholder="Le gusta la piña" required>
         <label for="Imagen">Imagen: </label>
-        <input type="text" id="imagen" name="imagen" placeholder="https://s2.coinmarketcap.com/static/img/coins/200x200/16636.png">
+        <input type="file" id="imagen" name="imagen" required>
         <br><br>
         <input type="submit" value="Enviar">
     </form>
