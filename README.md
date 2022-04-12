@@ -62,3 +62,21 @@ Ciberataque que consta en insertar código propio en una página con SQL para po
 -Url por SMS.
 -Mobile Connect que valida al usuario por la Tarjeta SIM.
 #### admin. (2019, July 5). ¿Cuál es el mejor método de autenticación? Retrieved from El blog de Orange website: https://blog.orange.es/empresas/cual-es-el-mejor-metodo-de-autenticacion/
+## ¿En qué consiste el control de acceso basado en roles? (Lab 19)
+Aplicación de atributos de seguridad informática a procesos que permite controlar el acceso de un usuario a las funcionalidades de un sistema, basado en el rol o privilegio que posea con respecto al uso completo de la aplicación. Normalmente, define los de mayor acceso (usualmente llamados administradores) y otros cuyo acceso se ve limitado por el sistema mismo.
+## Investiguen y describan 2 sistemas, uno que aplique RBAC y uno que no. Realicen un análisis de las ventajas y desventajas de cada uno con respecto al control de acceso. (Lab 19)
+### Beneficios
+-Aumenta la seguridad de los sistemas.
+
+-Permite un manejo empresarial efectivo, dinámico y adecuado para los trabajadores.
+
+-Permite un fácil cambio de posición o puesto sin afectar el funcionamiento previo del sistema del usuario.
+
+-Es sencillo asignar o revocar el rol en la página por bloques dependiendo del rol en la empresa que los usuarios manejan.
+### Desventajas
+-No es adecuado para pequeñas empresas pues genera costoso y dificultoso manejar roles y permisos.
+
+-Mayor costo en tiempo de desarrollo, mantenimiento y dinero.
+
+-Puede generar discordancia a largo plazo por la evolución del sistema de trabajo de la empresa o de los individuos encargados de la página.
+#### Control de acceso basado en roles (descripción general) - Guía de administración del sistema: servicios de seguridad. (2011). Oracle.com. https://docs.oracle.com/cd/E24842_01/html/E23286/rbac-1.html#:~:text=El%20control%20de%20acceso%20basado,normalmente%20est%C3%A1n%20restringidas%20al%20superusuario.
